@@ -1,9 +1,5 @@
-import csv
-
-all_students=[]
-
-def add_students():
-    global all_students
+def add_students(all_students):
+    
     while True:
         try:
             number_of_students= int(input("How many students do you want to add? "))
@@ -61,8 +57,8 @@ def add_students():
 
 ###
 
-def show_all_students():
-    global all_students
+def show_all_students(all_students):
+    
     
     if not all_students:
         print("No students to show.")
@@ -79,8 +75,8 @@ def show_all_students():
 
 ##
 
-def print_top3_avgs():
-    global all_students
+def print_top3_avgs(all_students):
+
     
     students_with_avg = []
     
@@ -103,8 +99,8 @@ def print_top3_avgs():
 
 ###
 
-def print_avg_of_avg_grades():
-    global all_students
+def print_avg_of_avg_grades(all_students):
+   
 
     if not all_students:
         print("No students available.")
@@ -127,8 +123,8 @@ def print_avg_of_avg_grades():
     return class_avg
 
 ##
-def delete_student():
-    global all_students
+def delete_student(all_students):
+    
 
     if not all_students:
         print("No students to delete.")
@@ -158,8 +154,8 @@ def delete_student():
 
 ##
 
-def show_failed_students():
-    global all_students
+def show_failed_students(all_students):
+    
 
     if not all_students:
         print("Nostudents to show")

@@ -2,6 +2,10 @@ import actions
 import data
 
 def show_menu():
+
+    all_students=[]
+
+
     while True:
         try:
             options = int(input(
@@ -23,21 +27,21 @@ Choose an option:
             continue
     
         if options==1:
-            actions.add_students()
+            actions.add_students(all_students)
         elif options==2:
-            actions.show_all_students()
+            actions.show_all_students(all_students)
         elif options==3:
-            actions.print_top3_avgs()
+            actions.print_top3_avgs(all_students)
         elif options==4:
-            actions.print_avg_of_avg_grades()
+            actions.print_avg_of_avg_grades(all_students)
         elif options==5:
-            data.export_to_csv(actions.all_students)
+            data.export_to_csv(all_students)
         elif options==6:
-            actions.all_students = data.import_students_from_csv()
+            all_students = data.import_students_from_csv()
         elif options==7:
-            actions.delete_student()   
+            actions.delete_student(all_students)   
         elif options==8:
-            actions.show_failed_students()
+            actions.show_failed_students(all_students)
         elif options==0:
             print("Goodbye!")
             break    
